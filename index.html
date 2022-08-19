@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digifist</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <section class="main">
+        <div class="main__image-container">
+            <img class="main__image" src="./assets/images/bg.png" alt="main-bg">
+        </div>
+
+        <div class="main__content">
+            <h2 class="main__title">
+                Everyday items, we have something to suit every occasion.
+            </h2>
+            <p class="main__description">
+                At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit tincidunt semper eu proin leo
+                gravida cursus.
+            </p>
+            <a class="main__more-button">
+                Shop All Everyday Items
+            </a>
+
+            <div class="main__products">
+                <ul id="products" class="products">
+                    <li class="product">
+                        <div class="product__image-wrapper">
+                            <img src="./assets/images/bg-1.png" alt="product-first" class="product__image">
+                        </div>
+                        <h4 class="product__title">
+                            365 Signature Hoodie
+
+                        </h4>
+                        <div class="product__details">
+                            <span class="product__price">
+                                €33.95
+                            </span>
+
+                            <div class="product__colors-wrapper">
+                                <div class="product__color blue-radio">
+                                    <input type="radio" name="first" id="blueColor" class="product__color-input" />
+                                    <label class="product__color-label" for="blueColor"></label>
+                                </div>
+                                <div class="product__color tuscany-radio">
+                                    <input type="radio" name="first" id="tuscanyColor" class="product__color-input" />
+                                    <label class="product__color-label" for="tuscanyColor"></label>
+                                </div>
+                                <div class="product__color purple-radio">
+                                    <input type="radio" name="first" id="purpleColor" class="product__color-input" />
+                                    <label class="product__color-label" for="purpleColor"></label>
+                                </div>
+                                <div class="product__color green-radio">
+                                    <input type="radio" name="first" id="greenColor" class="product__color-input" />
+                                    <label class="product__color-label" for="greenColor"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="product">
+                        <div class="product__image-wrapper">
+                            <img src="./assets/images/bg-1-1.png" alt="product-first" class="product__image">
+                        </div>
+                        <h4 class="product__title">
+                            Organic Skinny High Waist Jeans
+
+                        </h4>
+                        <div class="product__details">
+                            <span class="product__price">
+                                €33.95
+                            </span>
+
+                            <div class="product__colors-wrapper">
+                                <div class="product__color blue-radio">
+                                    <input type="radio" name="second" id="blueColor" class="product__color-input" />
+                                    <label class="product__color-label" for="blueColor"></label>
+                                </div>
+                                <div class="product__color tuscany-radio">
+                                    <input type="radio" name="second" id="tuscanyColor" class="product__color-input" />
+                                    <label class="product__color-label" for="tuscanyColor"></label>
+                                </div>
+                                <div class="product__color purple-radio">
+                                    <input type="radio" name="second" id="purpleColor" class="product__color-input" />
+                                    <label class="product__color-label" for="purpleColor"></label>
+                                </div>
+                                <div class="product__color green-radio">
+                                    <input type="radio" name="second" id="greenColor" class="product__color-input" />
+                                    <label class="product__color-label" for="greenColor"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="product">
+                        <div class="product__image-wrapper">
+                            <img src="./assets/images/bg-1-1.png" alt="product-first" class="product__image">
+                        </div>
+                        <h4 class="product__title">
+                            Organic Skinny High Waist Jeans
+
+                        </h4>
+                        <div class="product__details">
+                            <span class="product__price">
+                                €33.95
+                            </span>
+
+                            <div class="product__colors-wrapper">
+                                <div class="product__color blue-radio">
+                                    <input type="radio" name="third" id="blueColor" class="product__color-input" />
+                                    <label class="product__color-label" for="blueColor"></label>
+                                </div>
+                                <div class="product__color tuscany-radio">
+                                    <input type="radio" name="third" id="tuscanyColor" class="product__color-input" />
+                                    <label class="product__color-label" for="tuscanyColor"></label>
+                                </div>
+                                <div class="product__color purple-radio">
+                                    <input type="radio" name="third" id="purpleColor" class="product__color-input" />
+                                    <label class="product__color-label" for="purpleColor"></label>
+                                </div>
+                                <div class="product__color green-radio">
+                                    <input type="radio" name="third" id="greenColor" class="product__color-input" />
+                                    <label class="product__color-label" for="greenColor"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="paddles">
+                    <button id="leftPaddle" class="left-paddle paddle hidden">
+                        <img src="./assets/svg/chevron-right.svg" alt="chevron-right">
+                    </button>
+                    <button id="rightPaddle" class="right-paddle paddle">
+                        <img src="./assets/svg/chevron-right.svg" alt="chevron-right">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

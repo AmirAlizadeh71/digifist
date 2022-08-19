@@ -1,0 +1,316 @@
+/* --------------- font faces ------------------- */
+@font-face {
+  font-family: ITCAvantGardePro;
+  src: url('../assets/fonts/ITC_Avant_Garde_Gothic_Pro/ITCAvantGardePro-Bold.otf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: ITCAvantGardePro;
+  src: url('../assets/fonts/ITC_Avant_Garde_Gothic_Pro/ITCAvantGardePro-Bk.otf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: ITCAvantGardePro;
+  src: url('../assets/fonts/ITC_Avant_Garde_Gothic_Pro/ITCAvantGardePro-Demi.otf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: ITCAvantGardePro;
+  src: url('../assets/fonts/ITC_Avant_Garde_Gothic_Pro/ITCAvantGardePro-Md.otf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url('../assets/fonts/Avenir/Avenir.ttc');
+  font-weight: normal;
+}
+
+/* ----------------- general ------------------ */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------------main section ----------------- */
+.main {
+  display: flex;
+}
+
+.main__image-container {
+  width: 50vw;
+  object-fit: cover;
+}
+
+.main__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.main__content {
+  width: 50vw;
+  padding: 6rem 7.5rem;
+}
+
+.main__title {
+  font-family: 'ITCAvantGardePro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 130%;
+}
+
+.main__description {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 160%;
+  color: #666666;
+  padding: 0.75rem 0 1rem;
+}
+
+.main__more-button {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  text-transform: capitalize;
+  border-bottom: 1px solid black;
+  padding: 0 2px 0.3rem;
+  margin: 0 0 4.25rem;
+  display: inline-block;
+}
+
+.main__products {
+  position: relative;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin-right: -7.5rem;
+}
+
+/* ---------- products --------------- */
+.products {
+  box-sizing: border-box;
+  padding: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 0;
+}
+
+.products::-webkit-scrollbar {
+  display: none;
+}
+
+.product {
+  display: inline-block;
+  box-sizing: border-box;
+  padding-right: 2rem;
+}
+
+.product__title {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 160%;
+}
+
+.product__price {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 160%;
+}
+
+.product__image-wrapper {
+  width: 14.375rem;
+  height: 19.375rem;
+}
+
+.product__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product__title {
+  margin-bottom: 0.5rem;
+}
+
+.product__colors-wrapper {
+  display: flex;
+}
+
+.product__color {
+  width: 0.75rem;
+  height: 0.75rem;
+  margin: 0 0.25rem;
+}
+
+.paddle {
+  position: absolute;
+  top: 8.45rem;
+  bottom: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.left-paddle {
+  left: 3rem;
+}
+
+.left-paddle img {
+  transform: rotateY(180deg);
+}
+
+.right-paddle {
+  right: 3rem;
+}
+
+/* --------- product checkbox ------------------- */
+.product__color-input[type='radio'] {
+  display: none;
+}
+
+.product__color-label {
+  cursor: pointer;
+  position: relative;
+}
+
+.product__color-label::before {
+  content: '';
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  transition: border-color 400ms ease;
+}
+
+.product__color-label::after {
+  content: '';
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 50%;
+  left: -1px;
+  top: -1px;
+  transform: scale(0);
+  transition: transform 400ms ease;
+}
+
+.product__color-input[type='radio']:checked + .product__color-label::after {
+  transform: scale(0.55);
+}
+
+.product__color-input[type='radio']:checked + .product__color-label::before {
+  border-color: #000;
+  background-color: #fff;
+}
+
+.blue-radio .product__color-label::before {
+  background-color: #99c3cc;
+  border: 1px solid #99c3cc;
+}
+
+.blue-radio .product__color-label::after {
+  border-color: #99c3cc;
+  background-color: #99c3cc;
+}
+
+.tuscany-radio .product__color-label::before {
+  background-color: #cc9999;
+  border: 1px solid #cc9999;
+}
+
+.tuscany-radio .product__color-label::after {
+  border-color: #cc9999;
+  background-color: #cc9999;
+}
+
+.purple-radio .product__color-label::before {
+  background-color: #cb99cc;
+  border: 1px solid #cb99cc;
+}
+
+.purple-radio .product__color-label::after {
+  border-color: #cb99cc;
+  background-color: #cb99cc;
+}
+
+.green-radio .product__color-label::before {
+  background-color: #a6cc99;
+  border: 1px solid #a6cc99;
+}
+
+.green-radio .product__color-label::after {
+  border-color: #a6cc99;
+  background-color: #a6cc99;
+}
+
+/* ----- media queries -------- */
+
+@media screen and (max-width: 600px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .main__image-container {
+    width: 100%;
+  }
+
+  .main__content {
+    width: 100%;
+    padding: 4.25rem 1.5rem;
+    margin-top: -400px;
+  }
+
+  .main__description {
+    display: none;
+  }
+
+  .main__title {
+    color: #fff;
+  }
+
+  .main__more-button {
+    color: #fff;
+    border-bottom-color: #fff;
+  }
+
+  .main__products {
+    margin-right: -1.5rem;
+  }
+}
